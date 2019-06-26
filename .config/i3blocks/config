@@ -1,0 +1,71 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+command=$HOME/.i3scripts/$BLOCK_NAME
+separator_block_width=15
+markup=none
+[task]
+interval=2
+label=🏋
+
+[disk]
+interval=30
+label=🖴
+
+[ram]
+interval=3
+label=♈
+
+[netdevice]
+interval=30
+label=🛰
+separator=true
+
+[netssid]
+interval=5
+label=🖧
+separator=true
+markup=pango
+
+[netstat]
+interval=1
+separator=true
+markup=pango
+
+[temp]
+interval=1
+markup=pango
+label=🌡
+
+[battery]
+interval=2
+label=🗲
+markup=pango
+
+[time]
+label=🕑
+command=date '+%Y-%m-%d %H:%M:%S'
+interval=5
