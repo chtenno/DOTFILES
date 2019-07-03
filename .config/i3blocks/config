@@ -25,8 +25,11 @@
 # The top properties below are applied to every block, but can be overridden.
 # Each block command defaults to the script name to avoid boilerplate.
 command=$HOME/.i3scripts/$BLOCK_NAME
-separator_block_width=15
+separator_block_width=30
 markup=none
+[music]
+interval=1
+
 [task]
 interval=2
 label=🏋
@@ -65,7 +68,18 @@ interval=2
 label=🗲
 markup=pango
 
+[volume]
+label=🔊
+interval=1
+
 [time]
 label=🕑
-command=date '+%Y-%m-%d %H:%M:%S'
+command=date '+%H:%M'
 interval=5
+
+[date]
+label=🗓
+command=date '+%a %e %B'
+interval=60
+align=left
+min_width=170

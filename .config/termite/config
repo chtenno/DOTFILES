@@ -6,7 +6,7 @@
 #cell_width_scale = 1.0
 #clickable_url = true
 #dynamic_title = true
-font = Noto Sans Mono 15
+font = Noto Mono for Powerline 15
 #fullscreen = true
 #icon_name = terminal
 #mouse_autohide = false
@@ -51,27 +51,27 @@ scrollback_lines = 10000
 #background = #3f3f3f
 
 # 20% background transparency (requires a compositor)
-background = rgba(11, 14, 15, 0.8)
+background = rgba(11, 24, 50, 0.8)
 
 # If unset, will reverse foreground and background
 highlight = #2f2f2f
 
 # Colors from color0 to color254 can be set
-color1=#080D11
-color2=#8A99A8
-color3=#99A6B5
-color4=#9FAAB8
-color5=#9FB0C1
-color6=#AEB8C6
-color7=#BBC4CF
-color8=#dadee3
-color9=#989b9e
-color10=#8A99A8
-color11=#99A6B5
-color12=#9FAAB8
-color13=#9FB0C1
-color14=#AEB8C6
-color15=#BBC4CF
+color1=#0f1937
+color2=#614b6a
+color3=#9a4a68
+color4=#295c93
+color5=#3849b3
+color6=#5a5f93
+color7=#a4c8cc
+color8=#a45c9a
+color9=#728c8e
+color10=#614b6a
+color11=#9a4a68
+color12=#295c93
+color13=#3849b3
+color14=#5a5f93
+color15=#a4c8cc
 
 [hints]
 #font = Monospace 12

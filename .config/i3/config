@@ -26,6 +26,18 @@ font pango:Raleway 15
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn’t scale on retina/hidpi displays.
 
+#Brightness buttons
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20
+
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
+bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
+
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -43,10 +55,10 @@ bindsym $mod+d exec dmenu_run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+bindsym $mod+h focus left; exec flash
+bindsym $mod+j focus down; exec flash
+bindsym $mod+k focus up; exec flash
+bindsym $mod+l focus right; exec flash
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -144,10 +156,6 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -162,6 +170,11 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+
+bindsym $mod+ctrl+h resize shrink width 10 px or 10 ppt
+bindsym $mod+ctrl+j resize grow height 10 px or 10 ppt
+bindsym $mod+ctrl+k resize shrink height 10 px or 10 ppt
+bindsym $mod+ctrl+l resize grow width 10 px or 10 ppt
 
 #DISABLE WINDOW TITLEBARS
 for_window [class=".*"] border pixel 0
@@ -178,15 +191,17 @@ bar {
 	strip_workspace_numbers yes
 
 	colors {
-		background #0b0e0fcc	
-		focused_workspace #ffffffcc #ffffffcc #0b0e0fcc
-		active_workspace #9faab8cc #0b0e0fcc #9faab8cc
-		inactive_workspace #0b0e0fcc #0b0e0fcc #ffffffcc
-		urgent_workspace #9faab8cc #9faab8cc #000000cc
+		background #0b1832cc
+                statusline #a4c8cc
+		focused_workspace #a4c8cc #a4c8cc #0b1832cc
+		active_workspace #a4c8cc #0b1832cc #a4c8cc
+		inactive_workspace #0b1832cc #0b1832cc #a4c8cc
+		urgent_workspace #0b1832cc #0b1832cc #000000cc
 	}
 
 }
 
-bindsym $mod+p exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
+bindsym $mod+p exec qutebrowser
 exec compton -b
-exec feh --bg-scale ~/Pictures/telecomBuilding.jpg
+exec unclutter --timeout 1 &
+exec feh --bg-scale ~/Pictures/Background/background.jpg
