@@ -1,48 +1,84 @@
-from powerline_shell.themes.default import DefaultColor
+class DefaultColor(object):
+    """
+    This class should have the default colors for every segment.
+    Please test every new segment with this theme first.
+    """
+    # RESET is not a real color code. It is used as in indicator
+    # within the code that any foreground / background color should
+    # be cleared
+    RESET = -1
+
+    USERNAME_FG = 0
+    USERNAME_BG = 0
+    USERNAME_ROOT_BG = 10
+
+    HOSTNAME_FG = 250
+    HOSTNAME_BG = 238
+
+    HOME_SPECIAL_DISPLAY = True
+    HOME_BG = 1# blueish
+    HOME_FG = 0  # white
+    PATH_BG = 237  # dark grey
+    PATH_FG = 7 # light grey
+    CWD_FG = 254  # nearly-white grey
+    SEPARATOR_FG = 7
+
+    READONLY_BG = 124
+    READONLY_FG = 254
+
+    SSH_BG = 166  # medium orange
+    SSH_FG = 254
+
+    REPO_CLEAN_BG = 148  # a light green color
+    REPO_CLEAN_FG = 0  # black
+    REPO_DIRTY_BG = 161  # pink/red
+    REPO_DIRTY_FG = 15  # white
+
+    JOBS_FG = 39
+    JOBS_BG = 238
+
+    CMD_PASSED_BG = 3
+    CMD_PASSED_FG = 0
+    CMD_FAILED_BG = 124
+    CMD_FAILED_FG = 0
+
+    SVN_CHANGES_BG = 148
+    SVN_CHANGES_FG = 22  # dark green
+
+    GIT_AHEAD_BG = 240
+    GIT_AHEAD_FG = 250
+    GIT_BEHIND_BG = 240
+    GIT_BEHIND_FG = 250
+    GIT_STAGED_BG = 22
+    GIT_STAGED_FG = 15
+    GIT_NOTSTAGED_BG = 130
+    GIT_NOTSTAGED_FG = 15
+    GIT_UNTRACKED_BG = 52
+    GIT_UNTRACKED_FG = 15
+    GIT_CONFLICTED_BG = 9
+    GIT_CONFLICTED_FG = 15
+
+    GIT_STASH_BG = 221
+    GIT_STASH_FG = 0
+
+    VIRTUAL_ENV_BG = 35  # a mid-tone green
+    VIRTUAL_ENV_FG = 00
+
+    BATTERY_NORMAL_BG = 22
+    BATTERY_NORMAL_FG = 7
+    BATTERY_LOW_BG = 196
+    BATTERY_LOW_FG = 7
+
+    AWS_PROFILE_FG = 39
+    AWS_PROFILE_BG = 238
+
+    TIME_FG = 250
+    TIME_BG = 238
 
 
 class Color(DefaultColor):
-    """Basic theme which only uses colors in 0-15 range"""
-    USERNAME_FG = 1
-    USERNAME_BG = 1
-    USERNAME_ROOT_BG = 1
-
-    HOSTNAME_FG = 1
-    HOSTNAME_BG = 1
-
-    HOME_SPECIAL_DISPLAY = True
-    HOME_BG = 13
-    HOME_FG = 7
-    PATH_BG = 4 
-    PATH_FG = 8 # light grey
-    CWD_BG = 0
-    CWD_FG = 7
-    SEPARATOR_FG = 67 
-
-    READONLY_BG = 1
-    READONLY_FG = 15
-
-    REPO_CLEAN_BG = 2   # green
-    REPO_CLEAN_FG = 0   # black
-    REPO_DIRTY_BG = 1   # red
-    REPO_DIRTY_FG = 15  # white
-
-    JOBS_FG = 14
-    JOBS_BG = 1
-
-    CMD_PASSED_BG = 3
-    CMD_PASSED_FG = 13
-    CMD_FAILED_BG = 3
-    CMD_FAILED_FG = 13
-
-    SVN_CHANGES_BG = REPO_DIRTY_BG
-    SVN_CHANGES_FG = REPO_DIRTY_FG
-
-    VIRTUAL_ENV_BG = 110
-    VIRTUAL_ENV_FG = 234 
-
-    AWS_PROFILE_FG = 234
-    AWS_PROFILE_BG = 110
-
-    TIME_FG = 8
-    TIME_BG = 7
+    """
+    This subclass is required when the user chooses to use 'default' theme.
+    Because the segments require a 'Color' class for every theme.
+    """
+    pass

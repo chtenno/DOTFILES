@@ -25,61 +25,86 @@
 # The top properties below are applied to every block, but can be overridden.
 # Each block command defaults to the script name to avoid boilerplate.
 command=$HOME/.i3scripts/$BLOCK_NAME
-separator_block_width=30
-markup=none
+separator_block_width=40
+markup=pango
+separator=true
+
+border_top=0
+border_left=0
+border_right=0
+border_bottom=3
+
 [music]
 interval=1
+border=#a4b7a8
+color=#a4b7a8
 
 [task]
 interval=2
 label=🏋
-
-[disk]
-interval=30
-label=🖴
-
-[ram]
-interval=3
-label=♈
-
-[netdevice]
-interval=30
-label=🛰
-separator=true
-
-[netssid]
-interval=5
-label=🖧
-separator=true
-markup=pango
-
-[netstat]
-interval=1
-separator=true
-markup=pango
+border=#a4b7a8
+color=#a4b7a8
 
 [temp]
 interval=1
 markup=pango
 label=🌡
+border=#e3e5e4
+color=#e3e5e4
+
+[disk]
+interval=30
+label=🖴
+border=#fdcfad
+color=#fdcfad
+
+[ram]
+interval=3
+label=♈
+border=#fdcfad
+color=#fdcfad
+
+[netdevice]
+interval=30
+label=🛰
+color=#f98545
+border=#f98545
+
+[netssid]
+interval=5
+label=🖧
+border=#f98545
+color=#f98545
+
+[netstat]
+interval=1
+border=#f98545
+color=#f98545
+separator=false
 
 [battery]
 interval=2
 label=🗲
 markup=pango
+border_bottom=0
+align=right
+min_width=150
 
 [volume]
 label=🔊
 interval=1
+border_bottom=0
 
 [time]
 label=🕑
 command=date '+%H:%M'
 interval=5
+border_bottom=0
 
 [date]
 label=🗓
 command=date '+%a %e %B'
 interval=60
 align=left
-min_width=170
+min_width=180
+border_bottom=0
