@@ -1,0 +1,62 @@
+URxvt*background:   [50]#11525c
+XTerm*background:   #010F1C
+UXTerm*background:  #010F1C
+URxvt*cursorColor:  #7febe8
+XTerm*cursorColor:  #7febe8
+UXTerm*cursorColor: #7febe8
+URxvt*borderColor:  [50]#11525c
+
+! Colors 0-15.
+*.color0: #010F1C
+*color0:  #010F1C
+*.color1: #548366
+*color1:  #548366
+*.color2: #106994
+*color2:  #106994
+*.color3: #5C728C
+*color3:  #5C728C
+*.color4: #F04EAD
+*color4:  #F04EAD
+*.color5: #1AA2BD
+*color5:  #1AA2BD
+*.color6: #10F2AC
+*color6:  #10F2AC
+*.color7: #7febe8
+*color7:  #7febe8
+*.color8: #58a4a2
+*color8:  #58a4a2
+*.color9: #548366
+*color9:  #548366
+*.color10: #106994
+*color10:  #106994
+*.color11: #5C728C
+*color11:  #5C728C
+*.color12: #F04EAD
+*color12:  #F04EAD
+*.color13: #1AA2BD
+*color13:  #1AA2BD
+*.color14: #10F2AC
+*color14:  #10F2AC
+*.color15: #7febe8
+*color15:  #7febe8
+
+! Black color that will not be affected by bold highlighting.
+*.color66: #010F1C
+*color66:  #010F1C
+
+! Xclock colors.
+XClock*foreground: #7febe8
+XClock*background: #010F1C
+XClock*majorColor:  rgba:7f/eb/e8/ff
+XClock*minorColor:  rgba:7f/eb/e8/ff
+XClock*hourColor:   rgba:7f/eb/e8/ff
+XClock*minuteColor: rgba:7f/eb/e8/ff
+XClock*secondColor: rgba:7f/eb/e8/ff
+
+! Set depth to make transparency work.
+URxvt*depth: 32
+
+URxvt.scrollBar: false
+URxvt.font: xft:unifont:size=16
+URxvt.internalBorder: 40
+URxvt.foreground: #7febe8

@@ -34,77 +34,67 @@ border_left=0
 border_right=0
 border_bottom=3
 
-[music]
-interval=1
-border=#a4b7a8
-color=#a4b7a8
-
-[task]
-interval=2
-label=🏋
-border=#a4b7a8
-color=#a4b7a8
-
 [temp]
 interval=1
 markup=pango
 label=🌡
-border=#e3e5e4
-color=#e3e5e4
+border=#f04ead
+color=#f04ead
 
 [disk]
 interval=30
 label=🖴
-border=#fdcfad
-color=#fdcfad
+border=#f04ead
+color=#f04ead
 
 [ram]
 interval=3
-label=♈
-border=#fdcfad
-color=#fdcfad
+label=🐏
+border=#f04ead
+color=#f04ead
 
 [netdevice]
 interval=30
-label=🛰
-color=#f98545
-border=#f98545
+label=🖧
+color=#10f2ac
+border=#10f2ac
 
 [netssid]
 interval=5
-label=🖧
-border=#f98545
-color=#f98545
+label=📶
+border=#10f2ac
+color=#10f2ac
 
 [netstat]
 interval=1
-border=#f98545
-color=#f98545
-separator=false
+border=#10f2ac
+color=#10f2ac
 
 [battery]
 interval=2
-label=🗲
 markup=pango
-border_bottom=0
-align=right
-min_width=150
+border=#1aa2bd
 
 [volume]
 label=🔊
 interval=1
-border_bottom=0
+border=#1aa2bd
 
 [time]
 label=🕑
 command=date '+%H:%M'
 interval=5
-border_bottom=0
+border=#1aa2bd
 
 [date]
 label=🗓
 command=date '+%a %e %B'
 interval=60
-align=left
-min_width=180
-border_bottom=0
+separator=false
+border=#1aa2bd
+
+[space]
+command=echo ' '
+interval=once
+separator=false
+min_width=500

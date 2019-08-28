@@ -1,0 +1,4 @@
+colors.scheme=default
+visualizer.spectrum.bar.width=1
+visualizer.spectrum.falloff.mode=fill
+audio.stereo.enabled=false

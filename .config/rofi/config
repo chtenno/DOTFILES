@@ -1,0 +1,4 @@
+rofi.combi-modi:        window#drun#ssh
+rofi.theme:             custom 
+rofi.font:              unifont 17
+rofi.modi:              combi
